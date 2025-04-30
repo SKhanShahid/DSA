@@ -1,0 +1,16 @@
+# Ignore executable files
+*.exe
+*.out
+*.o
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+
+# OS junk
+.DS_Store
+Thumbs.db
