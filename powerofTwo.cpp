@@ -1,19 +1,22 @@
 #include <iostream>
-#include <climits> // For INT_MAX and INT_MIN constants
 using namespace std;
 
 class solution {
 public:
     bool isPowerOfTwo(int n) {
-        int ans = 1;
-        for(int i=0; i<=30; i++) {
-            if(ans == n) return true;
-            ans *= 2;
+        if(n <= 0) return false;
+        int mod=0;
+        while(n!=1){
+            mod=n%2;
+            if(mod==1){
+                return false;
+                break;
+            }
+            else{
+                n=n/2;
+            }
         }
-        if (ans < INT_MAX/2) {
-            ans *= 2; // To handle the case when n is INT_MAX
-        }
-        return false;
+        return true;    
     }
 };
  
